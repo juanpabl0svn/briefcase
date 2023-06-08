@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+a {
+  @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-100 flex items-center;
+}
+.title {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 32ch;
+
+  animation: typing 3s steps(32), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

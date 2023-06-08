@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link href="/css/style" rel="stylesheet" />
+    <script defer src="/script/main"></script>
+  </head>
+  <body class="bg-slate-50 dark:bg-zinc-600 w-full">
+    <header class="shadow-md h-20 w-full dark:bg-slate-800">
+      <nav
+        class="h-full w-full flex items-center justify-end"
+      >
+        <a href="#">Inicio</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+    <main class="w-[99%] h-3/5 absolute my-16 mx-0 flex items-center flex-col">
+      <div class="relative grid place-content-center place-items-center">
+        <h1 class="title text-2xl m-10 dark:text-white">
+          Hi, my name is Juan Pablo Sanchez 👨‍💻
+        </h1>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" id="dark-mode" class="sr-only peer" />
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+          <span
+            class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Dark Mode 🌙</span
+          >
+        </label>
+      </div>
+      <article class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]">
+        <img src="/images/icon" alt="selfie" class="w-1/2 float-right">
+        <p class="dark:text-white w-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias et cum doloribus veritatis eligendi vero explicabo consequuntur quasi molestiae illum, cumque facere expedita iure incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum saepe voluptatibus velit unde praesentium eos sed est tenetur distinctio ab, deserunt enim tempora?</p>
+      </article>
+      <section class="my-40 w-full flex flex-col items-center">
+          <h2 class="text-xl dark:text-white">Abilities</h2>
+          <article class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]">
+            <p class="dark:text-white w-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias et cum doloribus veritatis eligendi vero explicabo consequuntur quasi molestiae illum, cumque facere expedita iure incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum saepe voluptatibus velit unde praesentium eos sed est tenetur distinctio ab, deserunt enim tempora?</p>
+          </article>
+  
+      </section>
+    </mai>
+    <script>
+      const $ = (el) => document.getElementById(el);
+
+      const setDarkMode = $("dark-mode");
+
+      setDarkMode.addEventListener("change", (e) => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
