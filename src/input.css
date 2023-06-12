@@ -4,7 +4,7 @@
 
 @tailwind utilities;
 
-a {
+nav a {
   @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-100 flex items-center;
 }
 .title {
@@ -17,6 +17,25 @@ a {
   overflow: hidden;
 }
 
+
+article section a {
+  @apply dark:text-white hover:underline;
+}
+
+section img{
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  @apply  icons-images scale-50;
+}
+
+.contact img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  @apply hover:cursor-pointer my-2 hover:scale-125 transition-all;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -26,4 +45,35 @@ a {
   50% {
     border-color: transparent;
   }
+}
+
+
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+  display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;  
 }

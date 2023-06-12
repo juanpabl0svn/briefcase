@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/images/icon">
+    <link rel="icon" href="/icon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
-    <link href="/css/style" rel="stylesheet" />
-    <script defer src="/script/main"></script>
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body class="bg-slate-50 dark:bg-zinc-600 w-full">
-    <header class="shadow-md h-20 w-full dark:bg-slate-800">
-      <nav
-        class="h-full w-full flex items-center justify-end"
-      >
-        <a href="#">Inicio</a>
-        <a href="#">About</a>
+    <header
+      class="shadow-md h-20 w-full bg-slate-50 dark:bg-slate-800 fixed z-10 transition-all duration-300"
+      id="header"
+    >
+      <nav class="h-full w-full flex items-center justify-end">
+        <a href="#main">Main</a>
+        <a href="#abilities">Abilities</a>
+        <a href="#journey">Journey</a>
+        <a href="#icons">Icons</a>
       </nav>
     </header>
     <main class="w-[99%] h-3/5 absolute my-16 mx-0 flex items-center flex-col">
+      <!-- Switch  -->
       <div class="relative grid place-content-center place-items-center">
         <h1 class="title text-2xl m-10 dark:text-white">
           Hi, my name is Juan Pablo Sanchez 👨‍💻
@@ -34,26 +37,155 @@
           >
         </label>
       </div>
-      <article class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]">
-        <img src="/images/icon" alt="selfie" class="w-1/2 float-right">
-        <p class="dark:text-white w-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias et cum doloribus veritatis eligendi vero explicabo consequuntur quasi molestiae illum, cumque facere expedita iure incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum saepe voluptatibus velit unde praesentium eos sed est tenetur distinctio ab, deserunt enim tempora?</p>
+      <article
+        class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex items-center justify-center"
+        id="main"
+      >
+        <p class="dark:text-white w-full">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias
+          et cum doloribus veritatis eligendi vero explicabo consequuntur quasi
+          molestiae illum, cumque facere expedita iure incidunt earum eius ab!
+          Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum
+          saepe voluptatibus velit unde praesentium eos sed est tenetur
+          distinctio ab, deserunt enim tempora?
+        </p>
+        <img src="/icon.png" alt="selfie" class="w-1/2" />
       </article>
-      <section class="my-40 w-full flex flex-col items-center">
-          <h2 class="text-xl dark:text-white">Abilities</h2>
-          <article class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]">
-            <p class="dark:text-white w-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias et cum doloribus veritatis eligendi vero explicabo consequuntur quasi molestiae illum, cumque facere expedita iure incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum saepe voluptatibus velit unde praesentium eos sed est tenetur distinctio ab, deserunt enim tempora?</p>
-          </article>
-  
-      </section>
-    </mai>
-    <script>
-      const $ = (el) => document.getElementById(el);
+      <article class="mt-40 w-full flex flex-col items-center" id="abilities">
+        <h2 class="text-xl dark:text-white">Abilities</h2>
+        <section
+          class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]"
+        >
+          <p class="dark:text-white w-full">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+            alias et cum doloribus veritatis eligendi vero explicabo
+            consequuntur quasi molestiae illum, cumque facere expedita iure
+            incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Nesciunt possimus perferendis ratione
+            quod nemo? Inventore dolorum saepe voluptatibus velit unde
+            praesentium eos sed est tenetur distinctio ab, deserunt enim
+            tempora?
+          </p>
+        </section>
+        <section
+          class="grid grid-cols-5  gap-4 h-44 place-content-center place-items-center p-14"
+          id="icons"
+        >
+          <img src="/html-5.png" class="icons-images" alt="Freepik html" />
+          <img src="/css-3.png" class="icons-images" alt="Freepik css" />
+          <img src="/js.png" class="icons-images" alt="Freepik js" />
+          <img src="/py.png" class="icons-images" alt="Freepik py" />
+          <img src="/postgre.png" class="icons-images" alt="Freepik postgre" />
+        </section>
+      </article>
+      <article
+        class="my-11 w-full flex flex-col items-center justify-center"
+        id="journey"
+      >
+        <h2 class="text-xl dark:text-white">Journey</h2>
+        <section
+          class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)]"
+        >
+          <p class="dark:text-white w-full">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+            alias et cum doloribus veritatis eligendi vero explicabo
+            consequuntur quasi molestiae illum, cumque facere expedita iure
+            incidunt earum eius ab! Commodi? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Nesciunt possimus perferendis ratione
+            quod nemo? Inventore dolorum saepe voluptatibus velit unde
+            praesentium eos sed est tenetur distinctio ab, deserunt enim
+            tempora?
+          </p>
+        </section>
+      </article>
 
-      const setDarkMode = $("dark-mode");
-
-      setDarkMode.addEventListener("change", (e) => {
-        document.documentElement.classList.toggle("dark");
-      });
-    </script>
+      <article
+        class="my-11 w-full flex flex-col items-center justify-center"
+        id="icons"
+      >
+        <h2 class="text-xl dark:text-white">Icons authors</h2>
+        <section
+          class="w-3/5 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-start"
+        >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/postgre"
+            title="postgre iconos"
+            >Postgre iconos creados por Freepik - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/grado"
+            title="grado iconos"
+            >Grado iconos creados por SBTS2018 - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/html-5"
+            title="html 5 iconos"
+            >Html 5 iconos creados por Freepik - Flaticon</a
+          >
+          <a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos"
+            >Css iconos creados por Pixel perfect - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/html-5"
+            title="html 5 iconos"
+            >Html 5 iconos creados por Pixel perfect - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/github"
+            title="github iconos"
+            >Github iconos creados por Pixel perfect - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.com/free-icons/javascript"
+            title="javascript icons"
+            >Javascript icons created by Freepik - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/linkedin"
+            title="linkedin iconos"
+            >Linkedin iconos creados por Freepik - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/piton"
+            title="pitón iconos"
+            >Pitón iconos creados por Freepik - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.com/free-icons/whatsapp"
+            title="whatsapp icons"
+            >Whatsapp icons created by Fathema Khanom - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/gmail"
+            title="gmail iconos"
+            >Gmail iconos creados por Freepik - Flaticon</a
+          >
+          <a
+            href="https://www.flaticon.com/free-icons/arrow"
+            title="arrow icons"
+            >Arrow icons created by th studio - Flaticon</a
+          >
+        </section>
+      </article>
+      <footer>hola</footer>
+    </main>
+    <div class="contact fixed ml-2 top-1/3">
+      <a href="https://api.whatsapp.com/send?phone=573004353401" target="_blank"
+        ><img src="/whatsapp.png" alt=""
+      /></a>
+      <a href="mailto:juanpablo@yconsultores.com" target="_blank"
+        ><img src="/gmail.png" alt=""
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/juan-pablo-sanchez-villegas/"
+        target="_blank"
+        ><img src="/linkedin.png" alt=""
+      /></a>
+      <a href="https://github.com/juanpabl0svn" target="_blank"
+        ><img src="/github.png" alt=""
+      /></a>
+    </div>
+    <script src="/main.js"></script>
   </body>
 </html>
