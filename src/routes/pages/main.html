@@ -8,19 +8,26 @@
     <title>CV</title>
     <link href="styles.css" rel="stylesheet" />
   </head>
-  <body class="bg-slate-50 dark:bg-zinc-600 w-full">
+  <body class="bg-slate-50 dark:bg-zinc-600 w-full h-full">
     <header
       class="shadow-md h-20 w-full bg-slate-50 dark:bg-slate-800 fixed z-10 transition-all duration-300"
       id="header"
     >
-      <nav class="h-full w-full flex items-center justify-end">
+      <div class="absolute right-0">
+        <label for="mobile"><img src="/menu.png" alt="manu-icon" class="h-6 w-6 cursor-pointer"></label>
+        <input type="checkbox" name="mobile" id="mobile" class="" />
+      </div>
+      <nav class="h-full w-full flex items-center justify-end xs:flex-col xs:fixed xs:-z-10 xs:justify-center -left-40 bg-amber-800">
         <a href="#main">Main</a>
         <a href="#abilities">Abilities</a>
         <a href="#journey">Journey</a>
         <a href="#icons">Icons</a>
       </nav>
     </header>
-    <main class="w-[99%] h-3/5 absolute my-16 mx-0 flex items-center flex-col">
+    <main
+      class="w-full h-full absolute my-16 flex items-center flex-col"
+      id="main"
+    >
       <!-- Switch  -->
       <div class="relative grid place-content-center place-items-center">
         <h1 class="title text-2xl m-10 dark:text-white">
@@ -38,19 +45,22 @@
         </label>
       </div>
       <article
-        class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex items-center justify-center"
-        id="main"
+        class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex items-center justify-center gap-4 xs:flex-col"
       >
         <p class="dark:text-white w-full">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem alias
-          et cum doloribus veritatis eligendi vero explicabo consequuntur quasi
-          molestiae illum, cumque facere expedita iure incidunt earum eius ab!
-          Commodi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt possimus perferendis ratione quod nemo? Inventore dolorum
-          saepe voluptatibus velit unde praesentium eos sed est tenetur
-          distinctio ab, deserunt enim tempora?
+          As my web says, my name is Juan Pablo Sánchez, I'm a software
+          developer, I'm studying in Universidad de Medellín in
+          Medellín/Colombia, I stood out for being responsible, have a great
+          attitude, work hard for my goals and always trying to be the best
+          person that I can be, I'm focus in web programming but I'm open to
+          learn about other fields, I love what I do and how programming have
+          taken the humanity to take us where we are,
         </p>
-        <img src="/icon.png" alt="selfie" class="w-1/2" />
+        <img
+          src="/perfil.jpg"
+          alt="selfie"
+          class="w-64 h-56 object-cover rounded-full"
+        />
       </article>
       <article class="mt-40 w-full flex flex-col items-center" id="abilities">
         <h2 class="text-xl dark:text-white">Abilities</h2>
@@ -69,14 +79,14 @@
           </p>
         </section>
         <section
-          class="grid grid-cols-5  gap-4 h-44 place-content-center place-items-center p-14"
+          class="grid grid-cols-5 xs:grid-cols-1 xs:grid-rows-4 gap-4 h-44 place-content-center place-items-center p-14"
           id="icons"
         >
-          <img src="/html-5.png" class="icons-images" alt="Freepik html" />
-          <img src="/css-3.png" class="icons-images" alt="Freepik css" />
-          <img src="/js.png" class="icons-images" alt="Freepik js" />
-          <img src="/py.png" class="icons-images" alt="Freepik py" />
-          <img src="/postgre.png" class="icons-images" alt="Freepik postgre" />
+          <img src="/html-5.png" alt="Freepik html" title="html" />
+          <img src="/css-3.png" alt="Freepik css" title="css" />
+          <img src="/js.png" alt="Freepik js" title="javascript" />
+          <img src="/py.png" alt="Freepik py" title="python" />
+          <img src="/postgre.png" alt="Freepik postgre" title="postgresql" />
         </section>
       </article>
       <article
@@ -104,10 +114,15 @@
         class="my-11 w-full flex flex-col items-center justify-center"
         id="icons"
       >
-        <h2 class="text-xl dark:text-white">Icons authors</h2>
+        <h2 class="text-xl dark:text-white">Icons credits</h2>
         <section
           class="w-3/5 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-start"
         >
+          <a
+            href="https://www.flaticon.es/iconos-gratis/menu"
+            title="menú iconos"
+            >Menú iconos creados por ariefstudio - Flaticon</a
+          >
           <a
             href="https://www.flaticon.es/iconos-gratis/postgre"
             title="postgre iconos"
@@ -168,7 +183,14 @@
           >
         </section>
       </article>
-      <footer>hola</footer>
+
+      <footer
+        class="mt-14 h-48 w-full bg-slate-200 dark:bg-slate-800 flex justify-center"
+      >
+        <p class="dark:text-white">
+          Copyright (c) 2023 Juan Pablo Sanchez All Rights Reserved
+        </p>
+      </footer>
     </main>
     <div class="contact fixed ml-2 top-1/3">
       <a href="https://api.whatsapp.com/send?phone=573004353401" target="_blank"

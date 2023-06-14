@@ -4,9 +4,15 @@
 
 @tailwind utilities;
 
-nav a {
-  @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-100 flex items-center;
+html, body{
+  @apply m-0 p-0;
 }
+
+nav a {
+  @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-100 flex items-center xs:px-2 xs:h-6 xs:py-8 xs:w-28;
+}
+
+
 .title {
   display: block;
   white-space: nowrap;
@@ -19,21 +25,15 @@ nav a {
 
 
 article section a {
-  @apply dark:text-white hover:underline;
+  @apply dark:text-white hover:underline before:content-['-'];
 }
 
 section img{
-  width: 6rem;
-  height: 6rem;
-  object-fit: cover;
-  @apply  icons-images scale-50;
+  @apply w-24 h-24 object-cover;
 }
 
 .contact img{
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-  @apply hover:cursor-pointer my-2 hover:scale-125 transition-all;
+  @apply hover:cursor-pointer my-2 hover:scale-125 transition-all w-8 h-8 object-cover;
 }
 
 @keyframes typing {
@@ -48,7 +48,9 @@ section img{
 }
 
 
-
+#mobile:checked nav{
+  @apply w-full h-full right-0;
+}
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 

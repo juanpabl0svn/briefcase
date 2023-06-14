@@ -505,6 +505,14 @@ video {
   position: relative;
 }
 
+.-left-40 {
+  left: -10rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .top-1\/3 {
   top: 33.333333%;
 }
@@ -515,11 +523,6 @@ video {
 
 .m-10 {
   margin: 2.5rem;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .my-10 {
@@ -545,6 +548,10 @@ video {
   margin-left: 0.75rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-40 {
   margin-top: 10rem;
 }
@@ -565,12 +572,16 @@ video {
   height: 5rem;
 }
 
-.h-3\/5 {
-  height: 60%;
-}
-
 .h-44 {
   height: 11rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-56 {
+  height: 14rem;
 }
 
 .h-6 {
@@ -581,10 +592,6 @@ video {
   height: 100%;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-11 {
   width: 2.75rem;
 }
@@ -593,12 +600,16 @@ video {
   width: 60%;
 }
 
-.w-9\/12 {
-  width: 75%;
+.w-6 {
+  width: 1.5rem;
 }
 
-.w-\[99\%\] {
-  width: 99%;
+.w-64 {
+  width: 16rem;
+}
+
+.w-9\/12 {
+  width: 75%;
 }
 
 .w-full {
@@ -609,8 +620,8 @@ video {
   cursor: pointer;
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -666,6 +677,16 @@ video {
 .bg-slate-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+.bg-amber-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 64 14 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-14 {
@@ -728,6 +749,11 @@ video {
   transition-duration: 300ms;
 }
 
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
 nav a {
   display: flex;
   height: 100%;
@@ -757,6 +783,20 @@ nav a:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
+
+@media (max-width: 700px) {
+
+  nav a {
+    height: 1.5rem;
+    width: 7rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
 .title {
   display: block;
   white-space: nowrap;
@@ -765,6 +805,12 @@ nav a:hover {
 
   animation: typing 3s steps(32), blink 0.5s infinite step-end alternate;
   overflow: hidden;
+}
+
+
+article section a::before {
+  --tw-content: '-';
+  content: var(--tw-content);
 }
 
 
@@ -778,21 +824,20 @@ article section a:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-section img{
-  width: 6rem;
+section img {
   height: 6rem;
+  width: 6rem;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.contact img{
-  width: 2rem;
-  height: 2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+.contact img {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -817,7 +862,11 @@ section img{
 }
 
 
-
+#mobile:checked nav {
+  right: 0px;
+  height: 100%;
+  width: 100%;
+}
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 
@@ -985,9 +1034,29 @@ body::-webkit-scrollbar-track {
   --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
 }
 
-@media (min-width: 640px) {
+@media (max-width: 700px) {
 
-  .sm\:grid-rows-4 {
+  .xs\:fixed {
+    position: fixed;
+  }
+
+  .xs\:-z-10 {
+    z-index: -10;
+  }
+
+  .xs\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .xs\:grid-rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+
+  .xs\:flex-col {
+    flex-direction: column;
+  }
+
+  .xs\:justify-center {
+    justify-content: center;
   }
 }
