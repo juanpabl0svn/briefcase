@@ -30,8 +30,12 @@ if (localStorage.getItem('darkMode') === 'true'){
 let firtsLocation = window.pageYOffset;
 
 window.onscroll = function () {
+  if (window.scrollY === 0){
+    header.style.top = '0'
+    return
+  }
+  // if (window.scrollY)
   let displacement = window.pageYOffset;
-
   header.style.top = firtsLocation >= displacement ? "0" : "-100px";
   firtsLocation = displacement;
 };

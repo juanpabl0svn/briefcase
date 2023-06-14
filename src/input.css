@@ -29,7 +29,7 @@ article section a {
 }
 
 section img{
-  @apply w-24 h-24 object-cover;
+  @apply w-[100%] h-auto object-cover;
 }
 
 .contact img{
@@ -47,9 +47,15 @@ section img{
   }
 }
 
+.images{
+  display: grid;
+  grid-template-columns: repeat( auto-fit ,minmax(50px,1fr));
+  gap: 5px;
+}
 
-#mobile:checked nav{
-  @apply w-full h-full right-0;
+
+#mobile:checked ~ nav{
+  @apply -right-[70%];
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/

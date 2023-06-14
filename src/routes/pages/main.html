@@ -10,14 +10,19 @@
   </head>
   <body class="bg-slate-50 dark:bg-zinc-600 w-full h-full">
     <header
-      class="shadow-md h-20 w-full bg-slate-50 dark:bg-slate-800 fixed z-10 transition-all duration-300"
+      class="shadow-md h-20 w-full bg-slate-50 dark:bg-slate-800 xs:flex fixed z-10 transition-all duration-300 xs:justify-end xs:items-center"
       id="header"
     >
-      <div class="absolute right-0">
-        <label for="mobile"><img src="/menu.png" alt="manu-icon" class="h-6 w-6 cursor-pointer"></label>
-        <input type="checkbox" name="mobile" id="mobile" class="" />
-      </div>
-      <nav class="h-full w-full flex items-center justify-end xs:flex-col xs:fixed xs:-z-10 xs:justify-center -left-40 bg-amber-800">
+      <label for="mobile"
+        ><img
+          src="/menu.png"
+          alt="manu-icon"
+          class="h-6 w-6 cursor-pointer sm:hidden mr-4"
+      /></label>
+      <input type="checkbox" name="mobile" id="mobile" class="hidden" />
+      <nav
+        class="h-full w-full flex xs:fixed xs:top-0 items-center justify-end xs:flex-col xs:-z-10 xs:justify-center xs:items-start  xs:-right-[100%] transition-all duration-200 xs:bg-slate-300 xs:dark:bg-slate-800 xs:pl-2"
+      >
         <a href="#main">Main</a>
         <a href="#abilities">Abilities</a>
         <a href="#journey">Journey</a>
@@ -30,7 +35,7 @@
     >
       <!-- Switch  -->
       <div class="relative grid place-content-center place-items-center">
-        <h1 class="title text-2xl m-10 dark:text-white">
+        <h1 class="title text-2xl m-10 dark:text-white xs:relative xs:left-10">
           Hi, my name is Juan Pablo Sanchez 👨‍💻
         </h1>
         <label class="relative inline-flex items-center cursor-pointer">
@@ -47,6 +52,11 @@
       <article
         class="w-9/12 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex items-center justify-center gap-4 xs:flex-col"
       >
+      <img
+          src="/perfil.jpg"
+          alt="selfie"
+          class="w-64 h-56 object-cover rounded-full "
+        />
         <p class="dark:text-white w-full">
           As my web says, my name is Juan Pablo Sánchez, I'm a software
           developer, I'm studying in Universidad de Medellín in
@@ -56,11 +66,7 @@
           learn about other fields, I love what I do and how programming have
           taken the humanity to take us where we are,
         </p>
-        <img
-          src="/perfil.jpg"
-          alt="selfie"
-          class="w-64 h-56 object-cover rounded-full"
-        />
+        
       </article>
       <article class="mt-40 w-full flex flex-col items-center" id="abilities">
         <h2 class="text-xl dark:text-white">Abilities</h2>
@@ -79,7 +85,7 @@
           </p>
         </section>
         <section
-          class="grid grid-cols-5 xs:grid-cols-1 xs:grid-rows-4 gap-4 h-44 place-content-center place-items-center p-14"
+          class="images"
           id="icons"
         >
           <img src="/html-5.png" alt="Freepik html" title="html" />
@@ -116,7 +122,7 @@
       >
         <h2 class="text-xl dark:text-white">Icons credits</h2>
         <section
-          class="w-3/5 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-start"
+          class="w-3/5 my-10 bg-slate-200 dark:bg-slate-900 px-20 py-12 shadow-2xl dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-start xs:w-3/4 gap-1"
         >
           <a
             href="https://www.flaticon.es/iconos-gratis/menu"
