@@ -12,12 +12,12 @@ module.exports = {
 
       lg: "1440px",
       // => @media (min-width: 1440px) { ... }
-      xs: {'max': '700px'}
+      xs: { max: "700px" },
     },
   },
   extend: {
     // that is animation class
     animation: {},
-    plugins: [],
   },
+  plugins: [require("tailwindcss-animated")],
 };

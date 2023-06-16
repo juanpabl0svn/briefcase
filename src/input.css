@@ -51,11 +51,17 @@ section img{
   display: grid;
   grid-template-columns: repeat( auto-fit ,minmax(50px,1fr));
   gap: 5px;
+  width: 70vw;
+  max-width: 750px;
 }
 
 
 #mobile:checked ~ nav{
   @apply -right-[70%];
+}
+
+#mobile:checked ~ label{
+  transform: rotate(90deg)
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
