@@ -8,25 +8,19 @@ const setDarkMode = $("dark-mode");
 
 const header = $("header");
 
-const mobile = $("mobile");
+const menu = $("menu");
 
 const images = $("images");
 
 const contact = $("contact");
 
-const journey = $("journey");
+const icons = $("icons_authors");
 
-const icons = $("icons");
+const subtitles = document.getElementsByClassName('subtitle');
 
-setTimeout(() => {
-  // contact.classList.remove('-left-[100%')
-  contact.classList.remove("-left-[100%]");
-  contact.classList.add("left-3");
+const texts = document.getElementsByClassName('text');
 
-  setTimeout(() => {
-    contact.classList.remove("left-3");
-  }, 250);
-}, 200);
+contact.classList.remove("-left-[100%]");
 
 // Dark mode with localStorage
 setDarkMode.addEventListener("change", (e) => {
@@ -54,8 +48,8 @@ let firtsLocation = window.pageYOffset;
 
 //Scrolling
 document.onscroll = function (e) {
-  //When user is in the top (for mobile) or when the menu is visible
-  if (window.scrollY === 0 || mobile.checked) {
+  //When user is in the top (for menu) or when the menu is visible
+  if (window.scrollY === 0 || menu.checked) {
     header.style.top = "0";
     return;
   }
@@ -72,11 +66,24 @@ function createEfects() {
 
   const imagesHeight = images.offsetTop;
 
-  const journeyHeight = journey.offsetTop;
-
   const iconsHeight = icons.offsetTop;
 
-  if (imagesHeight - 750 < scrollTop) {
+  Object.entries(subtitles).forEach(([key,value])=> {
+    if (value.offsetTop-700 < scrollTop){
+      value.classList.remove('opacity-0')
+      value.classList.add('animate-fade-down')
+    }
+  })
+
+  Object.entries(texts).forEach(([key,value])=> {
+    if (value.offsetTop-800 < scrollTop){
+      value.classList.remove('opacity-0')
+      value.classList.add('animate-fade')
+    }
+  })
+
+
+  if (imagesHeight - 650 < scrollTop) {
     Object.entries(images.childNodes).forEach(([key, value]) => {
       if (value.nodeName != "#text") {
         value.classList.remove("opacity-0");
@@ -85,12 +92,8 @@ function createEfects() {
     });
   }
 
-  if (journeyHeight - 750 < scrollTop) {
-    journey.classList.remove("opacity-0");
-    journey.classList.add("animate-fade");
-  }
 
-  if (iconsHeight -750 < scrollTop) {
+  if (iconsHeight -700 < scrollTop) {
     Object.entries(icons.childNodes).forEach(([key,value])=>{
       if (value.nodeName != '#text'){
         value.classList.remove("opacity-0")
@@ -100,3 +103,5 @@ function createEfects() {
     })
   }
 }
+
+createEfects()

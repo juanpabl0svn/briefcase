@@ -8,9 +8,9 @@ html, body{
   @apply m-0 p-0;
 }
 
-nav a {
-  @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-100 flex items-center xs:px-2 xs:h-6 xs:py-8 xs:w-1/4;
-}
+/* nav a {
+  @apply text-blue-400 px-10 h-full dark:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition ease-in-out duration-300 flex items-center xs:px-2 xs:h-6 xs:py-8 xs:w-1/4;
+} */
 
 
 .title {
@@ -33,7 +33,7 @@ section img{
 }
 
 .contact img{
-  @apply hover:cursor-pointer my-2 hover:scale-125 transition-all w-8 h-8 object-cover;
+  @apply hover:cursor-pointer my-2 hover:scale-150 transition-all w-8 h-8 object-cover duration-300;
 }
 
 @keyframes typing {
@@ -54,14 +54,18 @@ section img{
   width: 70vw;
   max-width: 750px;
 }
+/* 
+nav{
+  @apply duration-[400ms] transition-all ease-in-out;
+} */
 
 
-#mobile:checked ~ nav{
-  @apply -right-[70%];
+#menu:checked ~ nav{
+  @apply right-0 duration-[400ms];
 }
 
-#mobile:checked ~ label{
-  transform: rotate(90deg)
+#menu:checked ~ label{
+  @apply rotate-90;
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
@@ -83,11 +87,12 @@ body::-webkit-scrollbar:horizontal {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #797979;
+  @apply dark:bg-[#797979]; 
+  @apply bg-slate-200;
   border-radius: 20px;
-  border: 2px solid #f1f2f3;
 }
 
-body::-webkit-scrollbar-track {
-  border-radius: 10px;  
-}
+/* body::-webkit-scrollbar-track {
+  border-radius: 60px;  
+} */
+

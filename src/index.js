@@ -8,8 +8,7 @@ const app = express();
 
 app.use(router)
 
-app.use(express.static(path.join(__dirname,'..','images')))
-app.use(express.static(path.join(__dirname,'..','dist')))
+app.use(express.static(path.join(__dirname,'..','public')))
 
 PORT = process.env.PORT || 3000;
 
