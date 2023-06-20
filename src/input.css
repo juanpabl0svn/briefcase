@@ -17,7 +17,7 @@ html, body{
   display: block;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 32ch;
+  width: 85%;
 
   animation: typing 3s steps(32), blink 0.5s infinite step-end alternate;
   overflow: hidden;
@@ -54,11 +54,6 @@ section img{
   width: 70vw;
   max-width: 750px;
 }
-/* 
-nav{
-  @apply duration-[400ms] transition-all ease-in-out;
-} */
-
 
 #menu:checked ~ nav{
   @apply right-0 duration-[400ms];
@@ -91,8 +86,3 @@ body::-webkit-scrollbar-thumb {
   @apply bg-slate-200;
   border-radius: 20px;
 }
-
-/* body::-webkit-scrollbar-track {
-  border-radius: 60px;  
-} */
-
